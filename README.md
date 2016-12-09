@@ -7,7 +7,7 @@ Tech-terest is a demo application scaffolded from the MEAN.JS full-stack JavaScr
 This repo is based on the [freecodecamp](https://www.freecodecamp.com/challenges/https://www.freecodecamp.com/challenges/build-a-pinterest-clone) courseware.
 Authentication integrated with Twitter and Facebook API via oauth2.
 
-[!Snapshot](https://sg-tech-terest.herokuapp.com/modules/books/client/img/snapshot.png)
+[![Snapshot](https://sg-tech-terest.herokuapp.com/modules/pictures/client/img/snapshot.png)
 
 ## Before You Begin
 Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application:
