@@ -26,6 +26,8 @@ module.exports = {
         'public/lib/semantic-ui-angular-jquery/src/dropdown/sm-dropdown.js',
         'public/lib/semantic-ui-angular-jquery/src/checkbox/sm-checkbox.js',
         'public/lib/semantic-ui-angular-jquery/src/checkbox/sm-radio.js',
+        'public/lib/masonry-layout/dist/masonry.pkgd.js',
+        'public/lib//imagesloaded/imagesloaded.pkgd.js',
         'public/lib/underscore/underscore.js'
       ],
       tests: ['public/lib/angular-mocks/angular-mocks.js']

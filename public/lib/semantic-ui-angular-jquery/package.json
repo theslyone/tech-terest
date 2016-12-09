@@ -10,7 +10,7 @@
         "spec": ">=0.2.1 <0.3.0",
         "type": "range"
       },
-      "C:\\Users\\thesl\\Documents\\nodejs\\freecodecamp\\book-trader"
+      "C:\\Users\\thesl\\Documents\\nodejs\\freecodecamp\\tech-terest"
     ]
   ],
   "_from": "semantic-ui-angular-jquery@>=0.2.1 <0.3.0",
@@ -44,7 +44,7 @@
   "_shasum": "0029a0003ca9abf70549f43a7ad299387523a1b8",
   "_shrinkwrap": null,
   "_spec": "semantic-ui-angular-jquery@^0.2.1",
-  "_where": "C:\\Users\\thesl\\Documents\\nodejs\\freecodecamp\\book-trader",
+  "_where": "C:\\Users\\thesl\\Documents\\nodejs\\freecodecamp\\tech-terest",
   "author": {
     "name": "Philip Diffenderfer"
   },

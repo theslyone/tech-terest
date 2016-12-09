@@ -1,0 +1,32 @@
+<section class="ui text container segment">
+  <div class="ui dividing header">
+    <h1>{{vm.picture._id ? 'Edit Picture' : 'New Picture'}}</h1>
+  </div>
+  <div>
+    <form name="vm.form.pictureForm" class="ui mini form" ng-submit="vm.save(vm.form.pictureForm.$valid)" novalidate>
+      <div class="form-group field">
+        <img class="ui centered compact image" ng-src="{{vm.picture.url === '' ? '/modules/pictures/client/img/placeholder.png' : vm.picture.url}}" />
+      </div>
+      <div class="form-group field" show-errors>
+        <input name="url" type="text" ng-model="vm.picture.url" id="url" class="form-control"
+          placeholder="Url..." required>
+        <div ng-messages="vm.form.pictureForm.name.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">Picture url is required.</p>
+        </div>
+      </div>
+      <div class="form-group field" show-errors>
+        <input name="caption" type="text" ng-model="vm.picture.caption" id="caption" class="form-control"
+          placeholder="Caption..." required>
+        <div ng-messages="vm.form.pictureForm.name.$error" role="alert">
+          <p class="help-block error-text" ng-message="required">Picture caption is required.</p>
+        </div>
+      </div>
+      <div class="form-group field">
+        <button type="submit" class="ui mini green fluid button">{{vm.picture._id ? 'Update' : 'Add'}}</button>
+      </div>
+      <div ng-show="vm.error" class="text-danger">
+        <strong ng-bind="vm.error"></strong>
+      </div>
+    </form>
+  </div>
+</section>

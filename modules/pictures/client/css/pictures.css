@@ -1,0 +1,99 @@
+.card-card-grid {
+  margin: 0 auto;
+  width: auto;
+}
+
+.card-grid-item {
+  background-color: #f8f8f8;
+  padding: 5px;
+  width: 190px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 2px 2px 5px rgba(102, 102, 102, 0.5);
+  border-radius: 4px;
+}
+
+.card-grid-item:hover {
+  z-index: 5;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px #D4D4D5, 5px 5px 7px rgba(102, 102, 102, 0.5);
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.card-grid-item .main-img img {
+  width: 180px;
+}
+
+.card-grid-item .main-img p {
+  background-color: #e8e8e8;
+  margin-top: 5px;
+  padding: 5px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.card-grid-item .content {
+  margin-top: 5px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.card-grid-item .content img {
+  width: 35px;
+}
+
+.card-grid-item .extra {
+  max-width: 100%;
+  min-height: 0!important;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  border-top: 1px solid rgba(0,0,0,.05)!important;
+  position: static;
+  background: 0 0;
+  width: auto;
+  margin: 0;
+  top: 0;
+  left: 0;
+  color: rgba(0,0,0,.4);
+  box-shadow: none;
+  -webkit-transition: color .1s ease;
+  transition: color .1s ease;
+}
+
+.card-grid-item .content .like.icon, .card-grid-item .extra .like.icon {
+  cursor: pointer;
+  opacity: .75;
+  -webkit-transition: color .1s ease;
+  transition: color .1s ease;
+}
+
+.card-grid-item .content .like.icon:hover, .card-grid-item .extra .like.icon:hover {
+  opacity: 1;
+  color: #FF2733;
+}
+
+.card-grid-item [class*="right floated"] {
+  float: right;
+}
+
+.card-grid-item [class*="left floated"] {
+  float: left;
+}

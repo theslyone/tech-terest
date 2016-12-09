@@ -27,39 +27,38 @@ a:hover .header-profile-image {
   display: inline;
 }
 
+*, :after, :before {
+  box-sizing: border-box;
+}
 
 html {
-  box-sizing: border-box;
-  position: relative;
-  min-height: 100%;
+  height: 100%;
+  color: #404040;
+  font: 400 1em/1.4 'Open Sans',sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  position: relative;
+body{
   margin: 0;
-  padding-bottom: 6rem;
-  min-height: 100%;
-  background-color: /*#c7a777*/#e9d4b7 !important;
-}
-
-body, html {
-  height: auto !important;
-}
-
-.banner {
-  background: #0E1619 url(../img/brand/banner-img.jpg) no-repeat scroll 50% 25%/ cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background-color: /*#145d85 #a6b07b*/#343434 !important;
 }
 
 /*Top Navigation*/
 header {
   width: 100%;
-  height: 70px;
+  height: 50px;
+  background: #f0efed !important;
+  color: #999  !important;
 }
 
 header a.item:hover, header a.item.active{
@@ -69,8 +68,8 @@ header a.item:hover, header a.item.active{
 
 header img.logo {
   display: inline-block;
-  height: 60px;
-  line-height: 70px;
+  height: 40px;
+  line-height: 50px;
   padding: 5px 0 5px 0;
 }
 
@@ -78,13 +77,28 @@ header .profile.image{
   margin-right: 5px;
 }
 
-.main.container {
-  background-color: #fff;
-  color: #000 !important;
+.banner {
+  background: #0E1619 url(../img/brand/banner-img.jpg) no-repeat scroll 50% 25%/ cover;
 }
 
-.ui.content.container {
-  min-height:100%;
+/*Footer*/
+footer{
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  background: #f0ede4 !important;
+  color: #999  !important;
+}
+
+
+/*Main content*/
+.main.container {
+  webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding-top: 100px;
 }
 
 .vertically.padded{

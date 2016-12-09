@@ -230,7 +230,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: './node_modules',
             filter: 'isFile',
-            src: ['./semantic-ui-angular-jquery/**'],
+            src: ['./semantic-ui-angular-jquery/**', './masonry-layout/dist/**', './imagesloaded/**'],
             dest: 'public/lib'
           }
         ],

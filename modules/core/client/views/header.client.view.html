@@ -12,16 +12,7 @@
     </div>
     <a ng-repeat="item in menu.items | orderBy: 'position'" ng-class="{ active: $state.includes(item.state) }"
       ng-if="item.type !== 'dropdown' && item.shouldRender(authentication.user);" ui-sref="{{item.state}}" class="item" ng-bind="item.title"></a>
-  </div>
-  <div class="right search menu">
-    <div class="ui right aligned place search item" ng-class="{'loading': searching}">
-      <div class="ui icon input">
-        <input class="prompt search" type="search" placeholder="Book search..."
-        ng-model="query" ng-model-options="{ debounce: 200 }" ng-keypress="doSearch($event)">
-        <i class="search link icon"></i>
-      </div>
-    </div>
-  </div>
+  </div>  
   <div class="right menu" ng-hide="authentication.user">
     <a ui-sref-active="active" class="item" ui-sref="authentication.signup">Sign Up</a>
     <a ui-sref-active="active" class="item" ui-sref="authentication.signin">Sign In</a>
