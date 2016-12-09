@@ -1,0 +1,42 @@
+<section class="ui text centered segment container" ng-controller="AuthenticationController">
+  <h3 class="ui center aligned header">Sign in using your social accounts</h3>
+  <div class="ui centered grid">
+    <button class="ui facebook button" ng-click="callOauthProvider('/api/auth/facebook')"  ng-hide="true">
+      <i class="facebook icon"></i>
+      Facebook
+    </button>
+    <button class="ui twitter button" ng-click="callOauthProvider('/api/auth/twitter')">
+      <i class="twitter icon"></i>
+      Twitter
+    </button>
+    <button class="ui google plus button" ng-click="callOauthProvider('/api/auth/google')" ng-hide="true">
+      <i class="google plus icon"></i>
+      Google Plus
+    </button>
+    <button class="ui vk button" ng-hide="true">
+      <i class="vk icon"></i>
+      VK
+    </button>
+    <button class="ui linkedin button" ng-click="callOauthProvider('/api/auth/linkedin')" ng-hide="true">
+      <i class="linkedin icon"></i>
+      LinkedIn
+    </button>
+    <button class="ui instagram button" ng-hide="true">
+      <i class="instagram icon"></i>
+      Instagram
+    </button>
+    <button class="ui youtube button" ng-hide="true">
+      <i class="youtube icon"></i>
+      YouTube
+    </button>
+    <button class="ui github button" ng-click="callOauthProvider('/api/auth/github')" ng-hide="true">
+      <i class="github icon"></i>
+    </button>
+    <button class="ui paypal button" ng-click="callOauthProvider('/api/auth/paypal')" ng-hide="true">
+      <i class="paypal icon"></i>
+    </button>
+  </div>
+  <br>
+
+  <div ui-view></div>
+</section>

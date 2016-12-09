@@ -1,0 +1,43 @@
+<div class="ui container" ng-controller="HeaderController">
+  <a ui-sref="home" class="header">
+    <img class="logo" src="./modules/core/client/img/brand/logo.png">
+  </a>
+  <div class="right menu" ng-if="menu.shouldRender(authentication.user);">
+    <div ng-repeat="item in menu.items | orderBy: 'position'"
+      ng-if="item.type === 'dropdown' && item.shouldRender(authentication.user);" class="ui simple dropdown item">
+      {{::item.title}}&nbsp;<i class="dropdown icon"></i>
+      <div class="menu">
+        <a ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(authentication.user)" ui-sref="{{subitem.state}}" class="item" ng-bind="subitem.title"></a>
+      </div>
+    </div>
+    <a ng-repeat="item in menu.items | orderBy: 'position'" ng-class="{ active: $state.includes(item.state) }"
+      ng-if="item.type !== 'dropdown' && item.shouldRender(authentication.user);" ui-sref="{{item.state}}" class="item" ng-bind="item.title"></a>
+  </div>
+  <div class="right search menu">
+    <div class="ui right aligned place search item" ng-class="{'loading': searching}">
+      <div class="ui icon input">
+        <input class="prompt search" type="search" placeholder="Book search..."
+        ng-model="query" ng-model-options="{ debounce: 200 }" ng-keypress="doSearch($event)">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="right menu" ng-hide="authentication.user">
+    <a ui-sref-active="active" class="item" ui-sref="authentication.signup">Sign Up</a>
+    <a ui-sref-active="active" class="item" ui-sref="authentication.signin">Sign In</a>
+  </div>
+  <div class="right menu" ng-show="authentication.user">
+    <div class="ui simple dropdown item">
+      <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="ui mini circular profile image" />
+      <span ng-bind="authentication.user.displayName"></span> <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item" ui-sref="settings.profile">Edit Profile</a>
+        <a class="item" ui-sref="settings.picture">Change Profile Picture</a>
+        <a class="item" ui-sref="settings.password" ng-show="authentication.user.provider === 'local'">Change Password</a>
+        <a class="item" ui-sref="settings.accounts">Manage Social Accounts</a>
+        <div class="divider"></div>
+        <a class="item" href="/api/auth/signout" target="_self">Signout</a>
+      </div>
+    </div>
+  </div>
+</div>
